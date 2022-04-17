@@ -13,14 +13,14 @@ pub(super) const TEXTURES_ARRAY_SIZE: usize = 16;
 
 /// Sides where the vertex is located.
 ///
-/// * Bit 0 (LSB) is 0 for top and 1 for bottom.
-/// * Bit 1 is 0 for left and 1 for right.
+/// * Bit 0 (LSB) is 0 for left and 1 for right.
+/// * Bit 1       is 0 for top  and 1 for bottom.
 #[derive(Debug, Copy, Clone, PartialEq)]
 #[repr(u8)]
 pub enum VertexSide {
     TopLeft = 0b00,
-    TopRight = 0b10,
-    BottomLeft = 0b01,
+    TopRight = 0b01,
+    BottomLeft = 0b10,
     BottomRight = 0b11,
 }
 
